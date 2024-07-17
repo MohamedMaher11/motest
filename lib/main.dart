@@ -19,3 +19,7 @@ class MyHomePage extends StatelessWidget {
     );
   }
 }
+
+void sum() {
+  print(1 + 1);
+}
