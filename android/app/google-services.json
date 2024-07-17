@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "366865523111",
+    "project_id": "hamopharmacy11",
+    "storage_bucket": "hamopharmacy11.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:366865523111:android:5eca0ff8defe43179d5682",
+        "android_client_info": {
+          "package_name": "com.example.hamo_pharmacy"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCA_MGPk5XuLo6eJ1FrqJZpEaHcfuR4Nyk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:366865523111:android:f16bfa570bac96119d5682",
+        "android_client_info": {
+          "package_name": "com.example.testingnewapp"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCA_MGPk5XuLo6eJ1FrqJZpEaHcfuR4Nyk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

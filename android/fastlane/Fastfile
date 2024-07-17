@@ -1,0 +1,18 @@
+
+platform :android do
+  desc "Lane for Android Firebase Distribution"
+  lane :firebasedistribution do
+    sh "flutter clean"
+    sh "flutter build apk --release --no-tree-shake-icons"
+    ENV["FIREBASE_TIMEOUT"] = "1800" # 30 minutes
+    firebase_app_distribution(
+        app: "1:366865523111:android:5eca0ff8defe43179d5682",  # معرف التطبيق الصحيح
+        firebase_cli_token: "1//09h1g-G_vGzFCCgYIARAAGAkSNwF-L9Irp9XmAm2JAR0P-vmO6q61rA_Mb57QfgtCH3NtLi2Qm6v5UJk7s-gvDxm7hS38iLWu0-E",
+        android_artifact_type: "APK",
+        android_artifact_path: "../build/app/outputs/flutter-apk/app-release.apk",
+        testers: "mmaher1051998@gmail.com",
+        release_notes: "First Fastlane test",
+        upload_timeout: 1800
+    )
+  end
+end
