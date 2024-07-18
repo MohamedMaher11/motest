@@ -1,11 +1,14 @@
 import 'package:bloc/bloc.dart';
+import 'package:get_it/get_it.dart';
 import 'package:testingnewapp/Bloc/state.dart';
 import 'package:testingnewapp/Server/Apiserver.dart';
 
-class PostCubit extends Cubit<PostState> {
-  final ApiService _apiService;
+final getIt = GetIt.instance;
 
-  PostCubit(this._apiService) : super(PostInitial());
+class PostCubit extends Cubit<PostState> {
+  final ApiService _apiService = getIt<ApiService>();
+
+  PostCubit() : super(PostInitial());
 
   Future<void> fetchPosts() async {
     emit(PostLoading());

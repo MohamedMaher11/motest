@@ -2,10 +2,11 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:testingnewapp/Bloc/cubit.dart';
 import 'package:testingnewapp/Bloc/state.dart';
+import 'package:testingnewapp/GetIt/getit.dart';
 import 'package:testingnewapp/Model/model.dart';
-import 'package:testingnewapp/Server/Apiserver.dart';
 
 void main() {
+  setup(); // تهيئة get_it
   runApp(MyApp());
 }
 
@@ -18,7 +19,7 @@ class MyApp extends StatelessWidget {
         primarySwatch: Colors.blue,
       ),
       home: BlocProvider(
-        create: (context) => PostCubit(ApiService()),
+        create: (context) => PostCubit(),
         child: PostsPage(),
       ),
     );
