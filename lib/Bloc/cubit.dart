@@ -1,18 +1,17 @@
 import 'package:bloc/bloc.dart';
-import 'package:dio/dio.dart';
 import 'package:testingnewapp/Bloc/state.dart';
+import 'package:testingnewapp/Server/Apiserver.dart';
 
 class PostCubit extends Cubit<PostState> {
-  PostCubit() : super(PostInitial());
+  final ApiService _apiService;
 
-  final Dio _dio = Dio();
+  PostCubit(this._apiService) : super(PostInitial());
 
   Future<void> fetchPosts() async {
     emit(PostLoading());
     try {
-      final response =
-          await _dio.get('https://jsonplaceholder.typicode.com/posts');
-      emit(PostLoaded(response.data));
+      final posts = await _apiService.fetchPosts();
+      emit(PostLoaded(posts));
     } catch (e) {
       emit(PostError('Failed to fetch posts'));
     }

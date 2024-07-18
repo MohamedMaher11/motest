@@ -1,3 +1,5 @@
+import 'package:testingnewapp/Model/model.dart';
+
 // تعريف الحالات (states)
 abstract class PostState {}
 
@@ -6,7 +8,7 @@ class PostInitial extends PostState {}
 class PostLoading extends PostState {}
 
 class PostLoaded extends PostState {
-  final List<dynamic> posts;
+  final List<Post> posts;
   PostLoaded(this.posts);
 }
 
