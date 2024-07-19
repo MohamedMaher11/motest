@@ -71,7 +71,8 @@ class PostsPage extends StatelessWidget {
     );
   }
 }
-void plus(int x,int y)
-{
-  print(x+y);
+
+// main.dart
+int multiply(int x, int y) {
+  return x * y;
 }
