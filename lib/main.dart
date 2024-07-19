@@ -33,7 +33,7 @@ class PostsPage extends StatelessWidget {
 
     return Scaffold(
       appBar: AppBar(
-        title: Text('Posts'),
+        title: Text('PostsNew'),
       ),
       body: BlocBuilder<PostCubit, PostState>(
         builder: (context, state) {
