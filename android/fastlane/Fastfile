@@ -3,7 +3,7 @@ platform :android do
   desc "Lane for Android Firebase Distribution"
   lane :firebasedistribution do
     sh "flutter clean"
-    sh "flutter build apk --release --no-tree-shake-icons"
+    sh "flutter run --release --no-tree-shake-icons"
     ENV["FIREBASE_TIMEOUT"] = "1800" # 30 minutes
     firebase_app_distribution(
         app: "1:366865523111:android:5eca0ff8defe43179d5682",  # معرف التطبيق الصحيح
