@@ -71,3 +71,7 @@ class PostsPage extends StatelessWidget {
     );
   }
 }
+void plus(int x,int y)
+{
+  print(x+y);
+}
